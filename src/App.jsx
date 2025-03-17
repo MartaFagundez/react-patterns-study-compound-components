@@ -1,5 +1,5 @@
-import ProductCard from "./components/ProductCard";
-import ProfileCard from "./components/ProfileCard";
+import ProductCard from "./components/cards/ProductCard";
+import ProfileCard from "./components/cards/ProfileCard";
 
 function App() {
   return (
