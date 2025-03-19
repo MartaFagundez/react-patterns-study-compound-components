@@ -45,7 +45,8 @@ function App() {
             Accordions
           </h2>
 
-          <Accordion>
+          {/* Ejemplos usando la versión 1 */}
+          {/* <Accordion>
             <Accordion.Header>¿Qué es React?</Accordion.Header>
             <Accordion.Body>
               React es una biblioteca de JavaScript para construir interfaces de
@@ -73,6 +74,32 @@ function App() {
                 <li>Contacto</li>
               </ul>
             </Accordion.Body>
+          </Accordion> */}
+
+          {/* Ejemplo usando la segunda versión  */}
+          <Accordion isExclusive={true}>
+            <Accordion.Item index={0}>
+              <Accordion.Header>¿Qué es React?</Accordion.Header>
+              <Accordion.Body>
+                React es una biblioteca de JavaScript para construir interfaces
+                interactivas.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item index={1}>
+              <Accordion.Header>¿Qué es un componente?</Accordion.Header>
+              <Accordion.Body>
+                Un componente es una pieza reutilizable de la UI en React.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item index={2}>
+              <Accordion.Header>¿Cómo funciona el estado?</Accordion.Header>
+              <Accordion.Body>
+                El estado permite a los componentes de React manejar datos
+                dinámicos.
+              </Accordion.Body>
+            </Accordion.Item>
           </Accordion>
         </section>
       </div>
