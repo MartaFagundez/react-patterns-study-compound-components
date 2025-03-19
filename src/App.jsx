@@ -1,7 +1,7 @@
 import Accordion from "./components/accordions/Accordion";
 import ProductCard from "./components/cards/ProductCard";
 import ProfileCard from "./components/cards/ProfileCard";
-import Tabs from "./components/tabs/Tabs";
+import Wizard from "./components/wizard/Wizard";
 
 function App() {
   return (
@@ -104,34 +104,40 @@ function App() {
           </Accordion>
         </section>
 
+        {/* WIZARDS */}
         <section className="flex flex-col justify-center items-center gap-8">
-          <h2 className="mb-2 text-2xl font-bold text-center text-gray-900 md:text-3xl uppercase">Tabs</h2>
-          <Tabs defaultIndex={0}>
-            <Tabs.List>
-              <Tabs.Tab index={0}>Descripción</Tabs.Tab>
-              <Tabs.Tab index={1}>Especificaciones</Tabs.Tab>
-              <Tabs.Tab index={2}>Opiniones</Tabs.Tab>
-            </Tabs.List>
+          <h2 className="mb-2 text-2xl font-bold text-center text-gray-900 md:text-3xl uppercase">
+            Wizards
+          </h2>
 
-            <Tabs.Panels>
-              <Tabs.Panel>
-                <p>
-                  Este es un producto increíble con muchas características
-                  avanzadas.
-                </p>
-              </Tabs.Panel>
-              <Tabs.Panel>
-                <p>
-                  Peso: 1.2 kg, Dimensiones: 25 x 15 x 10 cm, Material: Aluminio
-                </p>
-              </Tabs.Panel>
-              <Tabs.Panel>
-                <p>
-                  ⭐⭐⭐⭐⭐ - ¡Me encantó este producto! Lo recomiendo mucho.
-                </p>
-              </Tabs.Panel>
-            </Tabs.Panels>
-          </Tabs>
+          <Wizard>
+            <Wizard.Step>
+              <h2 className="text-xl font-semibold">Paso 1</h2>
+              <p>
+                Bienvenido al asistente. Haz clic en "Siguiente" para continuar.
+              </p>
+            </Wizard.Step>
+
+            <Wizard.Step>
+              <h2 className="text-xl font-semibold">Paso 2</h2>
+              <p>Por favor, proporciona tu información.</p>
+              <input
+                type="text"
+                placeholder="Nombre"
+                className="mt-2 px-3 py-2 border rounded-lg w-full"
+              />
+            </Wizard.Step>
+
+            <Wizard.Step>
+              <h2 className="text-xl font-semibold">Paso 3</h2>
+              <p>
+                ¡Gracias por completar el formulario! Presiona "Finalizar" para
+                salir.
+              </p>
+            </Wizard.Step>
+
+            <Wizard.Navigation />
+          </Wizard>
         </section>
       </div>
     </div>
