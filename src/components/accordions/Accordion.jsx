@@ -43,7 +43,7 @@ function AccordionHeader({children}) {
     const {isOpen, toggle} = useContext(AccordionContext);
 
     return (
-        <div className="bg-gray-200 px-4 py-3 cursor-pointer flex justify-between items-center" on onClick={toggle}>
+        <div className="bg-gray-200 px-4 py-3 cursor-pointer flex justify-between items-center" onClick={toggle}>
             <h3 className="font-semibold">{children}</h3>
             <span>{isOpen ? "▲" : "▼"}</span>
         </div>

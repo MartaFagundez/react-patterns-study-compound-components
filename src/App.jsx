@@ -1,6 +1,7 @@
 import Accordion from "./components/accordions/Accordion";
 import ProductCard from "./components/cards/ProductCard";
 import ProfileCard from "./components/cards/ProfileCard";
+import Tabs from "./components/tabs/Tabs";
 
 function App() {
   return (
@@ -101,6 +102,36 @@ function App() {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
+        </section>
+
+        <section className="flex flex-col justify-center items-center gap-8">
+          <h2 className="mb-2 text-2xl font-bold text-center text-gray-900 md:text-3xl uppercase">Tabs</h2>
+          <Tabs defaultIndex={0}>
+            <Tabs.List>
+              <Tabs.Tab index={0}>Descripción</Tabs.Tab>
+              <Tabs.Tab index={1}>Especificaciones</Tabs.Tab>
+              <Tabs.Tab index={2}>Opiniones</Tabs.Tab>
+            </Tabs.List>
+
+            <Tabs.Panels>
+              <Tabs.Panel>
+                <p>
+                  Este es un producto increíble con muchas características
+                  avanzadas.
+                </p>
+              </Tabs.Panel>
+              <Tabs.Panel>
+                <p>
+                  Peso: 1.2 kg, Dimensiones: 25 x 15 x 10 cm, Material: Aluminio
+                </p>
+              </Tabs.Panel>
+              <Tabs.Panel>
+                <p>
+                  ⭐⭐⭐⭐⭐ - ¡Me encantó este producto! Lo recomiendo mucho.
+                </p>
+              </Tabs.Panel>
+            </Tabs.Panels>
+          </Tabs>
         </section>
       </div>
     </div>
